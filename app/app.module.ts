@@ -9,13 +9,6 @@ import { routing }        from './app.routing';
 
 import { HttpModule, JsonpModule } from '@angular/http';
 
-
-
-
-
-
-
-
 @NgModule({
   imports: [
     BrowserModule,

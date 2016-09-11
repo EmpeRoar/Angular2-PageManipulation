@@ -6,6 +6,9 @@ var signup_component_1 = require('./signup/signup.component');
 var header_component_1 = require('./header/header.component');
 var nav_component_1 = require('./nav/nav.component');
 var footer_component_1 = require('./footer/footer.component');
+var admin_component_1 = require('./admin/admin.component');
+var sidemenu_component_1 = require('./sidemenu/sidemenu.component');
+var content_component_1 = require('./content/content.component');
 var appRoutes = [
     {
         path: '',
@@ -13,6 +16,11 @@ var appRoutes = [
         pathMatch: 'full'
     },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+    { path: 'admin', children: [
+            { path: '', component: admin_component_1.AdminComponent },
+            { path: '', component: sidemenu_component_1.SideComponent, outlet: 'sidemenu' },
+            { path: '', component: content_component_1.ContentComponent, outlet: 'admincontent' }
+        ] },
     { path: 'firstpage', children: [
             { path: 'login', component: login_component_1.LoginComponent },
             { path: 'signup', component: signup_component_1.SignupComponent },

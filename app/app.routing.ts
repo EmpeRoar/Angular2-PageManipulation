@@ -8,6 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { AdminComponent } from './admin/admin.component';
+
+import { SideComponent } from './sidemenu/sidemenu.component';
+import { ContentComponent } from './content/content.component';
+
 
 const appRoutes: Routes = [
   {
@@ -16,6 +21,11 @@ const appRoutes: Routes = [
     pathMatch: 'full'    
   },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'admin', children:[
+     { path: '', component: AdminComponent},          
+     { path: '' , component: SideComponent, outlet: 'sidemenu'},
+     { path: '' , component: ContentComponent, outlet: 'admincontent'}
+  ]},
   { path: 'firstpage', children:[
      { path: 'login', component: LoginComponent},
      { path: 'signup', component: SignupComponent},
