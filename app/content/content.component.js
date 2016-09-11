@@ -16,7 +16,7 @@ var ContentComponent = (function () {
     ContentComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            template: "<div>Content Menu</div>"
+            template: "<div>Content Menu Hello World <a routerLink=\"/dashboard\">Dashboard</a> </div>"
         }), 
         __metadata('design:paramtypes', [])
     ], ContentComponent);
