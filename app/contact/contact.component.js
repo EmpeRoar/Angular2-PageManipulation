@@ -9,18 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ContentComponent = (function () {
-    function ContentComponent() {
+var router_1 = require('@angular/router');
+var ContactComponent = (function () {
+    function ContactComponent(router) {
+        this.router = router;
         this.title = 'Content';
     }
-    ContentComponent = __decorate([
+    ContactComponent.prototype.ngOnInit = function () {
+        console.log("Contact");
+        this.router.navigate(['dashboard']);
+    };
+    ContactComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            template: "<div>\n    Content Menu Hello World <br/>\n    <a routerLink=\"/dashboard\">Dashboard</a> <br/>\n    <a routerLink=\"/contact\">Contact</a> </div>"
+            template: "<div>Contact Redirects to Dashboard on Load </div>"
         }), 
-        __metadata('design:paramtypes', [])
-    ], ContentComponent);
-    return ContentComponent;
+        __metadata('design:paramtypes', [router_1.Router])
+    ], ContactComponent);
+    return ContactComponent;
 }());
-exports.ContentComponent = ContentComponent;
-//# sourceMappingURL=content.component.js.map
+exports.ContactComponent = ContactComponent;
+//# sourceMappingURL=contact.component.js.map

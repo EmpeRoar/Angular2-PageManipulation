@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { SideComponent } from './sidemenu/sidemenu.component';
 import { ContentComponent } from './content/content.component';
 
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
     pathMatch: 'full'    
   },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'admin', children:[
      { path: '', component: AdminComponent},          
      { path: '' , component: SideComponent, outlet: 'sidemenu'},

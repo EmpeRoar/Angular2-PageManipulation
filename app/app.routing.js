@@ -9,6 +9,7 @@ var footer_component_1 = require('./footer/footer.component');
 var admin_component_1 = require('./admin/admin.component');
 var sidemenu_component_1 = require('./sidemenu/sidemenu.component');
 var content_component_1 = require('./content/content.component');
+var contact_component_1 = require('./contact/contact.component');
 var appRoutes = [
     {
         path: '',
@@ -16,6 +17,7 @@ var appRoutes = [
         pathMatch: 'full'
     },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+    { path: 'contact', component: contact_component_1.ContactComponent },
     { path: 'admin', children: [
             { path: '', component: admin_component_1.AdminComponent },
             { path: '', component: sidemenu_component_1.SideComponent, outlet: 'sidemenu' },
